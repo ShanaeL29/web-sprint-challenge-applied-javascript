@@ -1,21 +1,21 @@
 import axios from "axios";
 
-// TASK 3
-// ---------------------
-// Implement this function which takes an array of strings ("topics") as its only argument.
-// As an example, if the topics passed are ['javascript', 'bootstrap', 'technology']
-// then the function returns the markup below.
-// The tags used, the hierarchy of elements and their attributes must match the provided markup!
-// The text inside elements will be set using their `textContent` property (NOT `innerText`).
-//
-// <div class="topics">
-//   <div class="tab">javascript</div>
-//   <div class="tab">bootstrap</div>
-//   <div class="tab">technology</div>
-// </div>
-//
-
 const Tabs = (topics) => {
+  // TASK 3
+  // ---------------------
+  // Implement this function which takes an array of strings ("topics") as its only argument.
+  // As an example, if the topics passed are ['javascript', 'bootstrap', 'technology']
+  // then the function returns the markup below.
+  // The tags used, the hierarchy of elements and their attributes must match the provided markup!
+  // The text inside elements will be set using their `textContent` property (NOT `innerText`).
+  //
+  // <div class="topics">
+  //   <div class="tab">javascript</div>
+  //   <div class="tab">bootstrap</div>
+  //   <div class="tab">technology</div>
+  // </div>
+  //
+
   //INSTANTIATION OF ELEMENTS
   const topicsElement = document.createElement("div");
   const topicTab1 = document.createElement("div");
@@ -68,6 +68,8 @@ const tabsAppender = (selector) => {
     .catch((err) => {
       console.error(err);
     });
+
+  return tabsAppender;
 };
 
 export { Tabs, tabsAppender };

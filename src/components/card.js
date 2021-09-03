@@ -17,7 +17,39 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
-}
+
+  // //Instantiation of elements
+  const card = document.createElement("div");
+  const headline = document.createElement("div");
+  const authorContainer = document.createElement("div");
+  const photoContainer = document.createElement("div");
+  const authorPhoto = document.createElement("img");
+  const author = document.createElement("span");
+
+  //Hierarchy of elements
+  card.appendChild(headline);
+  card.appendChild(authorContainer);
+  authorContainer.appendChild(photoContainer);
+  authorContainer.appendChild(author);
+  photoContainer.appendChild(authorPhoto);
+
+  //Classes
+  card.classList.add("card");
+  headline.classList.add("headline");
+  authorContainer.classList.add("author");
+  photoContainer.classList.add("img-container");
+
+  //Set text
+  headline.textContent = `${article["headline"]}`;
+  authorPhoto.setAttribute("src", `${article["authorPhoto"]}`);
+  author.textContent = `By ${article["authorName"]}`;
+
+  card.addEventListener("click", function () {
+    console.log(headline);
+  });
+
+  return card;
+};
 
 const cardAppender = (selector) => {
   // TASK 6
@@ -28,6 +60,6 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
-}
+};
 
-export { Card, cardAppender }
+export { Card, cardAppender };
