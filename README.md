@@ -65,7 +65,21 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+
+   DOM stands for Document Object Model. The DOM is a representation of the HTML blueprint meaning every element in order that exists for a page. The browser takes the HTML blueprint and creates a model, which is an object, for how a page should present. The model is the DOM.
+
 2. What is an event?
+
+   An event is a user interaction with the page. We can set an event action in our code and if that action occurs we can respond to it in many ways. An example of an event is a 'click'. I could set a click event onto a button, into my code, for example, and if a user clicks on the button and I have an event listener then I could have that buttons color or font-size change. This is just one of many examples of events and response types.
+
 3. What is an event listener?
+
+   An event listener can be added to an event with the method addEventListener(). An event listener sets up a function that will be called when the specified event occurs. The event listener function will have 2 arguments being the event it is listening for and the callback function to execute when the event is triggered. The "listener" is at the trigger of the event and the event handler is the function to run.
+
 4. Why would we convert a NodeList into an Array?
+
+   We would convert a NodeList into an array so that we can give ourselves access to all of the advanced array methods such as .map .filter .reduce etcetera. The collection itself is not a true array so we could only use forEach.
+
 5. What is a component?
+
+   A component is a reusable piece of code that can be used to build elements that share functionality and style so that we don't have to keep repeating ourselves. Components help us keep our code DRY.
